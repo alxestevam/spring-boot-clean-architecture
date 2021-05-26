@@ -1,13 +1,23 @@
-package br.facens.livrosgamificados.livrosgamificados.entities;
+package br.facens.livrosgamificados.livrosgamificados.usecases;
 
-public class User {
+import br.facens.livrosgamificados.livrosgamificados.entities.SubscriptionPlan;
+
+public class SignUpUserResponseData {
     private String username;
     private SubscriptionPlan subscriptionPlan;
     private Integer coins;
 
-    public User (String username, SubscriptionPlan subscriptionPlan, Integer coins) {
+    public SignUpUserResponseData(String username, SubscriptionPlan subscriptionPlan, Integer coins) {
+        this.username = username;
         this.subscriptionPlan = subscriptionPlan;
         this.coins = coins;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -25,13 +35,5 @@ public class User {
 
     public void setCoins(Integer coins) {
         this.coins = coins;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }

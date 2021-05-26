@@ -24,7 +24,7 @@ public class BookController {
 
     @GetMapping()
     List<Book> getBooks() {
-        User testUser = new User(SubscriptionPlan.Free, 10000);
+        User testUser = new User("Tester", SubscriptionPlan.Free, 10000);
 
         return this.listBooksInput.listForUser(testUser);
     }

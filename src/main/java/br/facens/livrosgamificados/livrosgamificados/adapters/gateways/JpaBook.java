@@ -15,8 +15,7 @@ public class JpaBook implements LoadBooksGateway {
 
     @Override
     public List<Book> loadBasics() {
-        List<BookDataMapper> bookDataMappers = this.jpaBookRepository.findAll();
-        // TODO: Change findAll to find only basic books
+        List<BookDataMapper> bookDataMappers = this.jpaBookRepository.findAllByHasAnimationIsFalseAndHasAugmentedRealityIsFalse();
 
         List<Book> books = new ArrayList<>();
 
